@@ -132,7 +132,7 @@ class LinkedList:
 
 myList = LinkedList()
 
-while true:
+while True:
     print(" ")
     print(" +++++++++++++++++++++++++++++++")
     print(" 1. Create List ")
