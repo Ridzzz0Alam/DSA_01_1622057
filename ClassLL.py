@@ -7,19 +7,19 @@ class Node:
 
     def updateData(self, data):
         self.data = data
-    
+
     def setLink(self, node):
         self.link = node
-    
+
     def getData(self):
         return self.data
-   
+
     def getNextNode(self):
         return self.link
 
 
 # LinkedList class
-class LinkedList:
+class LinkedList(object):
     def __init__(self):
         self.head = None
         self.tail = None
@@ -32,10 +32,10 @@ class LinkedList:
         del tempNode
 
     # method adds elements to the right of the Linked List
-    def addToEnd(self, data): 
+    def addToEnd(self, data):
         start = self.head
-        tempNode = Node(data) 
-      
+        tempNode = Node(data)
+
         while start.getNextNode():
             start = start.getNextNode()
         start.setLink(tempNode)
@@ -60,7 +60,7 @@ class LinkedList:
     def length(self):
         start = self.head
         size = 0
-        while start:# start != None
+        while start  :# start != None
             size += 1
             start = start.getNextNode()
         # print(size)
@@ -130,11 +130,10 @@ class LinkedList:
             del start
             return data
 
-myList = LinkedList()
 
 while True:
     print(" ")
-    print(" +++++++++++++++++++++++++++++++")
+    print(" +++++++++++++++++++++++++++++++++++++++++++++++++++++++")
     print(" 1. Create List ")
     print(" 2. Insert in the Beginning ")
     print(" 3. Insert in the Ending ")
@@ -145,39 +144,49 @@ while True:
     print(" 8. Find and Display the Min Element in the Linked LIst ")
     print(" 9. Print all the Elements in the List ")
     print(" 10. Exit ")
-    print(" +++++++++++++++++++++++++++++++")
+    print(" +++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+
+
     choice = int(input("Enter your choice: "))
+
     if choice ==1:
-		myLList = LinkedList()
-		print("The linked list has been created.")
-		print("")
-	elif choice == 2:
-		item = int(input("Enter number to add at the Beginning of the list: "))
-		myLList.addToStart(item)
-	elif choice == 3:
+        myLList = LinkedList()
+        print("The linked list has been created.")
+        print("")
+
+    elif choice == 2:
+        item = int(input("Enter number to add at the Beginning of the list: "))
+        myLList.addToStart(item)
+
+    elif choice == 3:
         item = int(input("Enter number to add at the End of the list: "))
-		myLList.addToEnd(item)
-	elif choice == 4:
-		number = int(input("Enter number you want to want to Delete: "))
-		myLList.remove(number)
-	elif choice == 5:
+        myLList.addToEnd(item)
+
+    elif choice == 4:
+        number = int(input("Enter number you want to want to Delete: "))
+        myLList.remove(number)
+
+    elif choice == 5:
         number = int(input("Enter number you want to Delete from the Tail: "))
-		myLList.pop(number)
+        myLList.pop(number)
+
     elif choice == 6:
-        print("Number of element(s) in the linked list: ",myLList.count())
+        print("Number of element(s) in the linked list: " ,myLList.count())
+
     elif choice == 7:
-		print("The Maximum Element in the List is :")
-		myLList.Max()
-     elif choice == 8:
-		print("The Minimum Element in the List is :")
-		myLList.Min()
+        print("The Maximum Element in the List is :")
+        myLList.Max()
+
+    elif choice == 8:
+        print("The Minimum Element in the List is :")
+        myLList.Min()
+
     elif choice == 9:
-		print("List of element(s):")
-		myLList.display()    
-	else:
-		break
+        print("List of element(s):")
+        myLList.display()
 
-
+    else:
+        break
 
 
 
