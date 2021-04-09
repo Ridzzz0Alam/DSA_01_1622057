@@ -114,22 +114,6 @@ class LinkedList(object):
         self.addToEnd(data)
         return True
 
-    # method removes and returns the last element from the Linked List
-    def pop(self):
-        start = self.head
-        previous = None
-
-        while start.getNextNode():
-            previous = start
-            start = start.getNextNode()
-
-        if previous is None:
-            self.head = None
-        else:
-            previous.setLink(None)
-            data = start.getData()
-            del start
-            return data
 
 
 while True:
@@ -138,13 +122,12 @@ while True:
     print(" 1. Create List ")
     print(" 2. Insert in the Beginning ")
     print(" 3. Insert in the Ending ")
-    print(" 4. Remove from Head ")
-    print(" 5. Remove form Tail ")
-    print(" 6. Count Element in the List and Display Size ")
-    print(" 7. Find and Display the Max Element in the Linked List ")
-    print(" 8. Find and Display the Min Element in the Linked LIst ")
-    print(" 9. Print all the Elements in the List ")
-    print(" 10. Exit ")
+    print(" 4. Remove an Element from the Linked List ")
+    print(" 5. Count Element in the List and Display Size ")
+    print(" 6. Find and Display the Max Element in the Linked List ")
+    print(" 7. Find and Display the Min Element in the Linked LIst ")
+    print(" 8. Print all the Elements in the List ")
+    print(" 9. Exit ")
     print(" +++++++++++++++++++++++++++++++++++++++++++++++++++++++")
 
 
@@ -168,19 +151,15 @@ while True:
         myLList.remove(number)
 
     elif choice == 5:
-        number = int(input("Enter number you want to Delete from the Tail: "))
-        myLList.pop(number)
-
-    elif choice == 6:
         print("Number of element(s) in the linked list: " ,myLList.length())
 
-    elif choice == 7:
+    elif choice == 6:
         print("The Maximum Element in the List is: " ,myLList.Max())
 
-    elif choice == 8:
+    elif choice == 7:
         print("The Minimum Element in the List is: " ,myLList.Min())
 
-    elif choice == 9:
+    elif choice == 8:
         print("List of element(s):")
         myLList.display()
 
