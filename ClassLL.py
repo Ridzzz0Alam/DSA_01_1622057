@@ -24,6 +24,7 @@ class LinkedList(object):
         self.head = None
         self.tail = None
 
+
     # method adds elements to the left of the Linked List
     def addToStart(self, data):
         tempNode = Node(data)
@@ -171,15 +172,13 @@ while True:
         myLList.pop(number)
 
     elif choice == 6:
-        print("Number of element(s) in the linked list: " ,myLList.count())
+        print("Number of element(s) in the linked list: " ,myLList.length())
 
     elif choice == 7:
-        print("The Maximum Element in the List is :")
-        myLList.Max()
+        print("The Maximum Element in the List is: " ,myLList.Max())
 
     elif choice == 8:
-        print("The Minimum Element in the List is :")
-        myLList.Min()
+        print("The Minimum Element in the List is: " ,myLList.Min())
 
     elif choice == 9:
         print("List of element(s):")
