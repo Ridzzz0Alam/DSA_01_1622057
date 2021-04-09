@@ -146,7 +146,37 @@ while True:
     print(" 9. Print all the Elements in the List ")
     print(" 10. Exit ")
     print(" +++++++++++++++++++++++++++++++")
-    
+    choice = int(input("Enter your choice: "))
+    if choice ==1:
+		myLList = LinkedList()
+		print("The linked list has been created.")
+		print("")
+	elif choice == 2:
+		item = int(input("Enter number to add at the Beginning of the list: "))
+		myLList.addToStart(item)
+	elif choice == 3:
+        item = int(input("Enter number to add at the End of the list: "))
+		myLList.addToEnd(item)
+	elif choice == 4:
+		number = int(input("Enter number you want to want to Delete: "))
+		myLList.remove(number)
+	elif choice == 5:
+        number = int(input("Enter number you want to Delete from the Tail: "))
+		myLList.pop(number)
+    elif choice == 6:
+        print("Number of element(s) in the linked list: ",myLList.count())
+    elif choice == 7:
+		print("The Maximum Element in the List is :")
+		myLList.Max()
+     elif choice == 8:
+		print("The Minimum Element in the List is :")
+		myLList.Min()
+    elif choice == 9:
+		print("List of element(s):")
+		myLList.display()    
+	else:
+		break
+
 
 
 
